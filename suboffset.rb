@@ -1,10 +1,26 @@
 #!/usr/bin/env ruby
 
-usage = "USAGE: suboffset inputfile.ass outputfile.ass delay
+# Copyright © 2011, David McIntosh <dmcintosh@df12.net>
+#
+# Permission to use, copy, modify, and/or distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+# A tool to add a delay to a Substation Alpha (ASS/SSA) subtitle file 
+
+USAGE = "suboffset.rb inputfile.ass outputfile.ass delay
 Where delay is expressed in seconds as a signed decimal, e.g., 0.21 or -1.23"
 
 unless ARGV.length == 3 then
-    print usage + "\n"
+    print "USAGE: " + USAGE + "\n"
     exit 1
 end
 
