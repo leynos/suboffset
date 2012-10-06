@@ -8,6 +8,6 @@ Set the script as executable before first use.
 
     ./suboffset.rb inputfile.ass outputfile.ass delay
 
-Where delay is expressed in seconds as a signed decimal, e.g., 0.21 or -1.23
+Where _delay_ is expressed in seconds as a signed decimal, e.g., 0.21 or -1.23
 
 Place the script in `~/bin` for ease of use if desired.
