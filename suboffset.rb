@@ -28,6 +28,12 @@ infilename = ARGV[0]
 outfilename = ARGV[1]
 delay = ARGV[2].to_f
 
+if File.exists? infilename and File.exists? outfilename and 
+    File.identical? infilename, outfilename then
+    print "Input and output cannot be the same file\n"
+    exit 1
+end
+
 # Add a given delay to a SSA time string
 def offsettime(time, delay)
     parts = time.split(":")
@@ -64,6 +70,6 @@ begin
         outfile.write offsetline
     end
 rescue Exception=>e
-    print "An error occurred: " + e
+    print "An error occurred: " + e + "\n"
     exit 1
 end
